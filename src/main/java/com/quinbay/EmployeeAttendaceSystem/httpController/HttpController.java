@@ -30,7 +30,7 @@ public class HttpController {
     public ResponseEntity<?> loginCheck(@RequestBody LoginVo loginVo) {
 
             UserVo userVo =  service.loginCheck(loginVo);
-        if(userVo.getId() > 0){
+        if(userVo.getId() > 1){
 
             return ResponseEntity.status(HttpStatus.OK)
                     .header("Content-Type", "application/json")
